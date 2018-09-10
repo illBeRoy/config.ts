@@ -1,0 +1,53 @@
+{
+  "name": "config.ts",
+  "description": "📚 Transparent, typesafe environment configuration",
+  "version": "1.0.0",
+  "author": "Roy Sommer",
+  "keywords": ["env", "config", "runtime", "typescript", "environment", "ts"],
+  "license": "ISC",
+  "main": "dist/src/index.js",
+  "type": "dist/src/index.d.ts",
+  "bin": {
+    "configts": "dist/src/configurator.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node .",
+    "build:typescript": "tsc",
+    "build": "npm run build:typescript",
+    "watch:typescript": "tsc -w",
+    "watch": "npm run watch:typescript",
+    "prepublish": "npm run build",
+    "publish:minor": "npm version minor && npm publish"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "prompts": "^1.1.0",
+    "ts-node": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.9.4",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)$": "ts-jest"
+    },
+    "roots": [
+      "src",
+      "test"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "^.+\\.spec\\.(ts|tsx|js)?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
