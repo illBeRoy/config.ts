@@ -6,3 +6,5 @@ tsconfig.json
 tslint.json
 logo.sketch
 images
+config.ts
+.config
